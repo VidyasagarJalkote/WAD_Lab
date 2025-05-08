@@ -1,0 +1,16 @@
+Step 1: Check Current Active Account
+gcloud auth list
+
+Step 2: Set Your Billing Account's Email as Active
+gcloud config set account 22103013@pvgcoet.ac.in
+
+If not listed, first authenticate it:
+gcloud auth login
+
+
+gcloud projects list
+
+gcloud config set project PROJECT_ID
+
+Set Billing Account (only if billing needs to be attached manually)
+gcloud billing accounts list

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Restaurant Menu</title>
+
+  <!-- jQuery + jQuery Mobile -->
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+  <style>
+    .menu-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .item-desc {
+      font-size: 16px;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Home Page -->
+  <div data-role="page" id="home">
+    <div data-role="header" data-theme="b">
+      <h1>🍴 Welcome to FoodFiesta</h1>
+    </div>
+
+    <div data-role="content">
+      <h3>Our Menu</h3>
+      <ul data-role="listview" data-inset="true">
+        <li><a href="#pizza">Pizza</a></li>
+        <li><a href="#burger">Burger</a></li>
+        <li><a href="#pasta">Pasta</a></li>
+        <li><a href="#dessert">Dessert</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Pizza Page -->
+  <div data-role="page" id="pizza">
+    <div data-role="header" data-theme="b">
+      <a href="#home" data-icon="back">Back</a>
+      <h1>Pizza</h1>
+    </div>
+    <div data-role="content">
+      <img src="https://source.unsplash.com/400x200/?pizza" class="menu-img" alt="Pizza">
+      <p class="item-desc">Delicious cheesy Margherita pizza topped with fresh basil and olives.</p>
+      <p><strong>Price:</strong> ₹299</p>
+    </div>
+  </div>
+
+  <!-- Burger Page -->
+  <div data-role="page" id="burger">
+    <div data-role="header" data-theme="b">
+      <a href="#home" data-icon="back">Back</a>
+      <h1>Burger</h1>
+    </div>
+    <div data-role="content">
+      <img src="https://source.unsplash.com/400x200/?burger" class="menu-img" alt="Burger">
+      <p class="item-desc">Grilled chicken burger with lettuce, cheese, and secret sauce.</p>
+      <p><strong>Price:</strong> ₹199</p>
+    </div>
+  </div>
+
+  <!-- Pasta Page -->
+  <div data-role="page" id="pasta">
+    <div data-role="header" data-theme="b">
+      <a href="#home" data-icon="back">Back</a>
+      <h1>Pasta</h1>
+    </div>
+    <div data-role="content">
+      <img src="https://source.unsplash.com/400x200/?pasta" class="menu-img" alt="Pasta">
+      <p class="item-desc">Creamy Alfredo pasta with parmesan cheese and herbs.</p>
+      <p><strong>Price:</strong> ₹249</p>
+    </div>
+  </div>
+
+  <!-- Dessert Page -->
+  <div data-role="page" id="dessert">
+    <div data-role="header" data-theme="b">
+      <a href="#home" data-icon="back">Back</a>
+      <h1>Dessert</h1>
+    </div>
+    <div data-role="content">
+      <img src="https://source.unsplash.com/400x200/?dessert" class="menu-img" alt="Dessert">
+      <p class="item-desc">Chocolate brownie with vanilla ice cream and hot fudge.</p>
+      <p><strong>Price:</strong> ₹159</p>
+    </div>
+  </div>
+
+</body>
+</html>

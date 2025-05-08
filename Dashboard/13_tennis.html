@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>All About Tennis</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+    body {
+      background-color: #f1f8e9;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .header {
+      background-color: #388e3c;
+      color: white;
+      text-align: center;
+      padding: 2.5rem 1rem;
+    }
+    .player-img {
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+    .player-img:hover {
+      transform: scale(1.05);
+    }
+    .achievements-section {
+      display: none;
+      background-color: #e8f5e9;
+      padding: 1rem;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    footer {
+      background-color: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 2rem;
+    }
+    .btn-toggle {
+      background-color: #43a047;
+      color: white;
+      font-weight: bold;
+    }
+    .btn-toggle:hover {
+      background-color: #1b5e20;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Tennis Hub</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#players">Players</a></li>
+          <li class="nav-item"><a class="nav-link" href="#rules">Rules</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <div class="header">
+    <h1>All About Tennis</h1>
+    <p>Explore Players • Learn Rules • Follow Tournaments</p>
+  </div>
+
+  <!-- Player Section -->
+  <div class="container my-5" id="players">
+    <h2 class="text-center text-success mb-4">Top Tennis Players</h2>
+    <div class="row g-4 text-center">
+      <div class="col-md-4">
+        <img src="https://source.unsplash.com/400x300/?roger,federer" class="player-img w-100" alt="Federer">
+        <button class="btn btn-outline-success mt-2" onclick="showAchievements('federer')">Federer</button>
+      </div>
+      <div class="col-md-4">
+        <img src="https://source.unsplash.com/400x300/?rafael,nadal" class="player-img w-100" alt="Nadal">
+        <button class="btn btn-outline-success mt-2" onclick="showAchievements('nadal')">Nadal</button>
+      </div>
+      <div class="col-md-4">
+        <img src="https://source.unsplash.com/400x300/?novak,djokovic" class="player-img w-100" alt="Djokovic">
+        <button class="btn btn-outline-success mt-2" onclick="showAchievements('djokovic')">Djokovic</button>
+      </div>
+    </div>
+
+    <!-- Achievements -->
+    <div class="achievements-section mt-4" id="achievements">
+      <h4>Achievements</h4>
+      <div id="achievement-content">
+        <!-- Filled dynamically by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Rules & Grand Slam Schedule -->
+  <div class="container my-5" id="rules">
+    <h3 class="text-center text-success mb-3">Rules & Grand Slam Schedule</h3>
+    <div class="row">
+      <div class="col-md-6">
+        <h5>Tennis Rules</h5>
+        <ul>
+          <li>Match is best of 3 or 5 sets.</li>
+          <li>Each set is won by scoring 6 games (with a 2-game lead).</li>
+          <li>15-30-40 scoring with deuce/advantage system.</li>
+          <li>Players switch sides after every odd game.</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <h5>2025 Grand Slam Schedule</h5>
+        <ul>
+          <li><strong>Australian Open:</strong> Jan 13 – Jan 26</li>
+          <li><strong>French Open:</strong> May 26 – Jun 9</li>
+          <li><strong>Wimbledon:</strong> Jul 1 – Jul 14</li>
+          <li><strong>US Open:</strong> Aug 26 – Sep 8</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Tennis Hub | Built for Sports Enthusiasts</p>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    function showAchievements(player) {
+      const content = document.getElementById("achievement-content");
+      const section = document.getElementById("achievements");
+      let html = "";
+      if (player === "federer") {
+        html = `<ul>
+                  <li>20 Grand Slam titles</li>
+                  <li>8 Wimbledon wins</li>
+                  <li>Held World No.1 for 310 weeks</li>
+                </ul>`;
+      } else if (player === "nadal") {
+        html = `<ul>
+                  <li>22 Grand Slam titles</li>
+                  <li>14 French Open wins</li>
+                  <li>Olympic Gold Medalist</li>
+                </ul>`;
+      } else if (player === "djokovic") {
+        html = `<ul>
+                  <li>24 Grand Slam titles (most in history)</li>
+                  <li>Record ATP Finals wins</li>
+                  <li>Held all 4 Slams simultaneously</li>
+                </ul>`;
+      }
+      content.innerHTML = html;
+      section.style.display = "block";
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

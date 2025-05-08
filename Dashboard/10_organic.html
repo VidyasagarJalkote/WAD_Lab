@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GreenHarvest Organic Farm</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+    body {
+      background-color: #f1f8e9;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .header {
+      background-color: #33691e;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      animation: fadeInDown 1s ease-out;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .farm-img {
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+    .farm-img:hover {
+      transform: scale(1.05);
+    }
+    .offers-section {
+      display: none;
+      background-color: #e8f5e9;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+    footer {
+      background-color: #33691e;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 2rem;
+    }
+    .btn-show {
+      background-color: #558b2f;
+      color: white;
+    }
+    .btn-show:hover {
+      background-color: #33691e;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">GreenHarvest</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarOrganic">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarOrganic">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="#offers">Offers</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <div class="header">
+    <h1>GreenHarvest Organic Farm</h1>
+    <p>Pure • Fresh • Chemical-Free</p>
+  </div>
+
+  <!-- Images and Headings -->
+  <div class="container mt-4" id="products">
+    <h2 class="text-center text-success mb-4">Our Organic Products</h2>
+    <div class="row g-4">
+      <div class="col-md-4 text-center">
+        <img src="https://source.unsplash.com/400x300/?organic,vegetables" class="farm-img w-100" alt="Veggies">
+        <h5 class="mt-2 text-success">Fresh Vegetables</h5>
+      </div>
+      <div class="col-md-4 text-center">
+        <img src="https://source.unsplash.com/400x300/?organic,fruits" class="farm-img w-100" alt="Fruits">
+        <h5 class="mt-2 text-warning">Seasonal Fruits</h5>
+      </div>
+      <div class="col-md-4 text-center">
+        <img src="https://source.unsplash.com/400x300/?organic,milk" class="farm-img w-100" alt="Milk">
+        <h5 class="mt-2 text-primary">Organic Milk</h5>
+      </div>
+    </div>
+  </div>
+
+  <!-- Clickable Button -->
+  <div class="text-center my-4">
+    <button class="btn btn-show" onclick="toggleOffers()">View Offers & Charges</button>
+  </div>
+
+  <!-- Offers Section -->
+  <div class="container offers-section" id="offers">
+    <h4>Special Offers & Charges:</h4>
+    <ul>
+      <li><strong>Veggie Box:</strong> ₹350/week – Includes 6 seasonal vegetables</li>
+      <li><strong>Fruit Basket:</strong> ₹400/week – 5 types of fresh fruits</li>
+      <li><strong>Organic Milk:</strong> ₹50/litre – Delivered daily</li>
+      <li><strong>Monthly Subscription:</strong> ₹999 – Combo pack with free delivery</li>
+    </ul>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 GreenHarvest Organic Farm. All Rights Reserved.</p>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    function toggleOffers() {
+      const offers = document.getElementById("offers");
+      offers.style.display = (offers.style.display === "none" || offers.style.display === "") ? "block" : "none";
+      offers.scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

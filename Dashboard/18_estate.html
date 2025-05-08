@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PrimeProperties - Real Estate</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+    body {
+      background-color: #f5f5f5;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .header {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+    }
+    .property-img {
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .contact-form {
+      background-color: #e3f2fd;
+      padding: 1.5rem;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    footer {
+      background-color: #002244;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">PrimeProperties</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#properties">Properties</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <div class="header">
+    <h1>PrimeProperties</h1>
+    <p>Find your dream home in your city</p>
+  </div>
+
+  <!-- Property Listings -->
+  <div class="container my-5" id="properties">
+    <h2 class="text-center text-primary mb-4">Available Properties</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <img src="https://source.unsplash.com/400x300/?house,villa" class="w-100 property-img" alt="Villa">
+        <h5 class="mt-2">3BHK Luxury Villa</h5>
+        <p><strong>Location:</strong> Kothrud, Pune<br><strong>Price:</strong> ₹1.2 Cr</p>
+      </div>
+      <div class="col-md-4">
+        <img src="https://source.unsplash.com/400x300/?apartment,building" class="w-100 property-img" alt="Apartment">
+        <h5 class="mt-2">2BHK Modern Apartment</h5>
+        <p><strong>Location:</strong> Baner, Pune<br><strong>Price:</strong> ₹78 Lakh</p>
+      </div>
+      <div class="col-md-4">
+        <img src="https://source.unsplash.com/400x300/?realestate,flat" class="w-100 property-img" alt="Flat">
+        <h5 class="mt-2">1BHK Starter Flat</h5>
+        <p><strong>Location:</strong> Hadapsar, Pune<br><strong>Price:</strong> ₹42 Lakh</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Us Button -->
+  <div class="text-center my-4">
+    <button class="btn btn-primary" onclick="scrollToContact()">Contact Us</button>
+  </div>
+
+  <!-- Contact Form -->
+  <div class="container" id="contact">
+    <div class="contact-form">
+      <h4>Contact Us for Site Visit or Booking</h4>
+      <form class="row g-3">
+        <div class="col-md-6">
+          <input type="text" class="form-control" placeholder="Your Name" required />
+        </div>
+        <div class="col-md-6">
+          <input type="email" class="form-control" placeholder="Your Email" required />
+        </div>
+        <div class="col-md-12">
+          <textarea class="form-control" rows="4" placeholder="Message or Query" required></textarea>
+        </div>
+        <div class="col-md-12 text-center">
+          <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 PrimeProperties | Helping You Find Home Sweet Home</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    function scrollToContact() {
+      document.getElementById("contact").scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

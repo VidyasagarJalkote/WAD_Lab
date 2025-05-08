@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CityRide - Car Rentals</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+    body {
+      background-color: #f9fbe7;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .header {
+      background-color: #1a237e;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      animation: fadeInDown 1s ease-out;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .car-img {
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+    .car-img:hover {
+      transform: scale(1.05);
+    }
+    .offers-section {
+      display: none;
+      background-color: #e8eaf6;
+      padding: 1rem;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    .btn-toggle {
+      background-color: #3949ab;
+      color: white;
+      font-weight: bold;
+    }
+    .btn-toggle:hover {
+      background-color: #1a237e;
+    }
+    footer {
+      background-color: #1a237e;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">CityRide</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#cars">Cars</a></li>
+          <li class="nav-item"><a class="nav-link" href="#offers">Offers</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <div class="header">
+    <h1>CityRide - Rent Cars in Your City</h1>
+    <p>Comfortable. Affordable. Convenient.</p>
+  </div>
+
+  <!-- Car Listings -->
+  <div class="container my-4" id="cars">
+    <h2 class="text-center text-primary mb-4">Available Cars</h2>
+    <div class="row g-4">
+      <div class="col-md-4 text-center">
+        <img src="https://source.unsplash.com/400x300/?sedan,car" alt="Sedan" class="car-img w-100">
+        <h5 class="mt-2 text-dark">Sedan - Comfortable Ride</h5>
+      </div>
+      <div class="col-md-4 text-center">
+        <img src="https://source.unsplash.com/400x300/?suv,car" alt="SUV" class="car-img w-100">
+        <h5 class="mt-2 text-dark">SUV - Family Trips</h5>
+      </div>
+      <div class="col-md-4 text-center">
+        <img src="https://source.unsplash.com/400x300/?hatchback,car" alt="Hatchback" class="car-img w-100">
+        <h5 class="mt-2 text-dark">Hatchback - Budget Travel</h5>
+      </div>
+    </div>
+  </div>
+
+  <!-- Button to Show Offers -->
+  <div class="text-center my-4">
+    <button class="btn btn-toggle" onclick="toggleOffers()">View Offers & Charges</button>
+  </div>
+
+  <!-- Offers Section -->
+  <div class="container offers-section" id="offers">
+    <h4>Rental Offers & Pricing:</h4>
+    <ul>
+      <li><strong>Sedan:</strong> ₹1000/day — ₹15/km</li>
+      <li><strong>SUV:</strong> ₹1500/day — ₹18/km</li>
+      <li><strong>Hatchback:</strong> ₹800/day — ₹12/km</li>
+      <li><strong>Weekend Combo:</strong> ₹2500 (Any car, 2 days)</li>
+      <li><strong>Monthly Rental:</strong> From ₹22,000 with free servicing</li>
+    </ul>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 CityRide Car Rentals. All Rights Reserved.</p>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    function toggleOffers() {
+      const section = document.getElementById("offers");
+      section.style.display = section.style.display === "none" || section.style.display === "" ? "block" : "none";
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

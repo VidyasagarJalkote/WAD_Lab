@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Department Grid - jQuery Mobile</title>
+
+  <!-- jQuery Mobile & jQuery -->
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+  <style>
+    .ui-grid-d .ui-block-a,
+    .ui-grid-d .ui-block-b,
+    .ui-grid-d .ui-block-c,
+    .ui-grid-d .ui-block-d,
+    .ui-grid-d .ui-block-e {
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Home Page -->
+  <div data-role="page" id="home">
+    <div data-role="header" data-theme="b">
+      <h1>Departments</h1>
+    </div>
+
+    <div data-role="content">
+      <div class="ui-grid-d">
+        <div class="ui-block-a"><a href="#it" class="ui-btn ui-corner-all ui-btn-b">IT</a></div>
+        <div class="ui-block-b"><a href="#comp" class="ui-btn ui-corner-all ui-btn-b">COMP</a></div>
+        <div class="ui-block-c"><a href="#etc" class="ui-btn ui-corner-all ui-btn-b">ETC</a></div>
+        <div class="ui-block-d"><a href="#mech" class="ui-btn ui-corner-all ui-btn-b">MECH</a></div>
+        <div class="ui-block-e"><a href="#elect" class="ui-btn ui-corner-all ui-btn-b">ELECT</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- IT Page -->
+  <div data-role="page" id="it">
+    <div data-role="header" data-theme="b">
+      <a href="#home" data-icon="back">Back</a>
+      <h1>IT Department</h1>
+    </div>
+    <div data-role="content">
+      <p>Information Technology department focuses on software development, networks, and data management.</p>
+    </div>
+  </div>
+
+  <!-- COMP Page -->
+  <div data-role="page" id="comp">
+    <div data-role="header" data-theme="b">
+      <a href="#home" data-icon="back">Back</a>
+      <h1>Computer Department</h1>
+    </div>
+    <div data-role="content">
+      <p>Computer Engineering emphasizes hardware, software, AI, and system programming.</p>
+    </div>
+  </div>
+
+  <!-- ETC Page -->
+  <div data-role="page" id="etc">
+    <div data-role="header" data-theme="b">
+      <a href="#home" data-icon="back">Back</a>
+      <h1>ETC Department</h1>
+    </div>
+    <div data-role="content">
+      <p>Electronics & Telecommunication deals with circuits, communication systems, and VLSI.</p>
+    </div>
+  </div>
+
+  <!-- MECH Page -->
+  <div data-role="page" id="mech">
+    <div data-role="header" data-theme="b">
+      <a href="#home" data-icon="back">Back</a>
+      <h1>Mechanical Department</h1>
+    </div>
+    <div data-role="content">
+      <p>Mechanical Engineering includes manufacturing, thermodynamics, and machine design.</p>
+    </div>
+  </div>
+
+  <!-- ELECT Page -->
+  <div data-role="page" id="elect">
+    <div data-role="header" data-theme="b">
+      <a href="#home" data-icon="back">Back</a>
+      <h1>Electrical Department</h1>
+    </div>
+    <div data-role="content">
+      <p>Electrical Engineering focuses on power systems, control, and electrical machines.</p>
+    </div>
+  </div>
+
+</body>
+</html>

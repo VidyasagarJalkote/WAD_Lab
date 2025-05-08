@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Feedback Form - jQuery Mobile</title>
+
+  <!-- jQuery + jQuery Mobile CDN -->
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+  <style>
+    .container {
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Page -->
+  <div data-role="page" id="feedbackPage">
+    <div data-role="header" data-theme="b">
+      <h1>Feedback Form</h1>
+    </div>
+
+    <div data-role="content" class="container">
+      <form id="feedbackForm">
+        
+        <label for="q1">Did you like our service?</label>
+        <select name="q1" id="q1" data-role="flipswitch">
+          <option value="no">No</option>
+          <option value="yes" selected>Yes</option>
+        </select>
+
+        <label for="q2">Was the staff helpful?</label>
+        <select name="q2" id="q2" data-role="flipswitch">
+          <option value="no">No</option>
+          <option value="yes" selected>Yes</option>
+        </select>
+
+        <label for="q3">Would you recommend us?</label>
+        <select name="q3" id="q3" data-role="flipswitch">
+          <option value="no">No</option>
+          <option value="yes" selected>Yes</option>
+        </select>
+
+        <label for="comments">Additional Comments:</label>
+        <textarea name="comments" id="comments" placeholder="Write something..."></textarea>
+
+        <button type="submit" class="ui-btn ui-btn-b ui-corner-all">Submit Feedback</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    $("#feedbackForm").on("submit", function(e) {
+      e.preventDefault();
+      const q1 = $("#q1").val();
+      const q2 = $("#q2").val();
+      const q3 = $("#q3").val();
+      const comments = $("#comments").val().trim();
+
+      alert(`Feedback submitted:\n\nService: ${q1}\nStaff Helpful: ${q2}\nRecommend: ${q3}\nComments: ${comments || 'None'}`);
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+# 1. Create project folder
+mkdir tourist-info
+cd tourist-info
+
+# 2. Initialize Node.js project
+npm init -y
+
+# 3. Install Express.js
+npm install express
+
+
+# 4. Start the server
+node index.js
